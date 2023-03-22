@@ -10,6 +10,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}"/>
     <title>Smartfony - AdminPanel</title>
 
+
     <!-- Vendors Style-->
     <link rel="stylesheet" href=" {{asset('adminPanel/css/vendors_css.css')}}">
 

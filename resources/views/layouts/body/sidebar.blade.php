@@ -9,7 +9,7 @@
 				  <!-- logo for regular state and mobile devices -->
 					 <div class="d-flex align-items-center justify-content-center">
 						  <img src="../images/logo-dark.png" alt="">
-						  <h3><b>Smartphones</b></h3>
+						  <h3><b>Intranet</b></h3>
 					 </div>
 				</a>
 			</div>
@@ -27,24 +27,22 @@
 
 
         <li class="header nav-small-cap">System</li>
-
         <li class="treeview">
           <a href="{{ route('users.index') }}">
             <i data-feather="users"></i>
             <span>Użytkownicy</span>
           </a>
-
             <ul class="treeview-menu">
                 <li>
                     <a href="{{ route('users.index') }}">
                         <i data-feather="plus-square"></i>
-                        <span>Dodaj produkt</span>
+                        <span>Zarządzaj użytkownikami</span>
                     </a>
                 </li>
                 <li>
                     <a href="{{ route('roles.index') }}">
                         <i data-feather="shopping-bag"></i>
-                        <span>Przeglądaj produkty</span>
+                        <span>Zarządzaj prawami</span>
                     </a>
                 </li>
             </ul>
