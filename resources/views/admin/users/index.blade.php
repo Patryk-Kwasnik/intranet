@@ -9,22 +9,27 @@
                 <div class="col-12">
                     <div class="box">
                         <div class="box-header with-border">
-                            <h3 class="box-title">All User </h3>
+                            <h3 class="box-title">{{ __('users.all_users') }} </h3>
                         </div>
                         <div class="pull-right">
-                            <a class="btn btn-primary" href="{{ route('users.create') }}"> Back</a>
+                            <a class="btn btn-primary mx-4 my-2" href="{{ route('users.create') }}"> {{ __('users.create') }}</a>
                         </div>
                         <!-- /.box-header -->
                         <div class="box-body">
+                            @if ($message = Session::get('success'))
+                                <div class="alert alert-success">
+                                    <p>{{ $message }}</p>
+                                </div>
+                            @endif
                             <div class="table-responsive">
-                                <table id="example1" class="table table-bordered table-striped">
+                                <table id="example1" class="table table-bordered ">
                                     <thead>
                                     <tr>
-                                        <th>Uźytkownik </th>
-                                        <th>Email</th>
-                                        <th>Telefon</th>
-                                        <th>Uprawnienia</th>
-                                        <th>Opcje</th>
+                                        <th>{{ __('users.user') }} </th>
+                                        <th>{{ __('users.email') }}</th>
+                                        <th>{{ __('users.phone') }}</th>
+                                        <th>{{ __('users.roles') }}</th>
+                                        <th class="col-3">{{ __('system.options') }}</th>
 
                                     </tr>
                                     </thead>
@@ -42,9 +47,11 @@
                                                 @endif
                                             </td>
                                             <td class="text-center">
-                                                <a href =" {{ route('users.show',$user->id) }}" class= "btn-sm btn btn-info"> <i class="fa fa-pencil"></i> Podgląd </a>
-                                                <a href =" {{ route('users.edit',$user->id) }}" class= "btn-sm btn btn-dark" ><i class="fa fa-pencil"></i> Edycja </a>
-                                                <a href =" {{ route('users.destroy', $user->id) }}" class= "btn-sm btn btn-danger" id="delete"><i class="fa fa-trash"></i> Usuń </a>
+                                                <a href =" {{ route('users.show',$user->id) }}" class= " btn btn-info"> <i class="fa fa-pencil"></i> {{ __('system.preview') }} </a>
+                                                <a href =" {{ route('users.edit',$user->id) }}" class= " btn btn-dark" ><i class="fa fa-pencil"></i> {{ __('system.edit') }} </a>
+                                                {!! Form::open(['method' => 'DELETE','route' => ['users.destroy', $user->id],'style'=>'display:inline','class' => 'delete_row','id'=>$user->id, 'data-id'=> $user->id]) !!}
+                                                {!! Form::submit(' Usuń', ['class' => ' btn btn-danger']) !!}
+                                                {!! Form::close() !!}
                                             </td>
                                         </tr>
                                     @endforeach
@@ -62,4 +69,5 @@
         </section>
         <!-- /.content -->
     </div>
+    {!! $data->render() !!}
 @endsection

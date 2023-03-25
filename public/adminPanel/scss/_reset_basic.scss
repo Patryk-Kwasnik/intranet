@@ -40,11 +40,11 @@ a {
 a{
     @include hover-state{
         outline: 0;
-        text-decoration: none;   
+        text-decoration: none;
     }
 }
 h1,h2,h3,h4,h5,h6,.h1, .h2, .h3, .h4, .h5, .h6 {
-	
+
 	font-family: inherit;
     font-weight: 400;
     line-height: 1.2;
@@ -368,7 +368,7 @@ $border-sizes-list: 0 1 2 3 4 5;
 .vertical-align:before{
     display: inline-block;
     height: 100%;
-    content: ''; 
+    content: '';
     vertical-align: middle;
 }
 .vertical-align-middle, .vertical-align-bottom{

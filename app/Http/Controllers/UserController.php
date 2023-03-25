@@ -56,7 +56,7 @@ class UserController extends Controller
         $user = User::create($input);
         $user->assignRole($request->input('roles'));
 
-        return redirect()->route('admin.users.index')
+        return redirect()->route('users.index')
             ->with('success','User created successfully');
     }
 
@@ -96,6 +96,7 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
+
         $this->validate($request, [
             'name' => 'required',
             'email' => 'required|email|unique:users,email,'.$id,
@@ -116,8 +117,8 @@ class UserController extends Controller
 
         $user->assignRole($request->input('roles'));
 
-        return redirect()->route('admin.users.index')
-            ->with('success','User updated successfully');
+        return redirect()->route('users.index')
+            ->with('success',__('system.success_update_mes'));
     }
 
     /**
@@ -129,7 +130,10 @@ class UserController extends Controller
     public function destroy($id)
     {
         User::find($id)->delete();
-        return redirect()->route('admin.users.index')
-            ->with('success','User deleted successfully');
+        $notification = array(
+            'message' => __('system.success_del_mess'),
+            'alert-type' => 'info'
+        );
+        return redirect()->route('roles.index')->with($notification);
     }
 }
