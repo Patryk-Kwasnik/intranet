@@ -16,5 +16,13 @@ return [
     'confirm_password' => 'Potwierdź hasło',
     'permission' => 'Uprawnienia',
 
+    'role-list' => 'Podgląd (Role)',
+    'role-create' => 'Dodawanie praw (Role)',
+    'role-edit' => 'Edycja praw (Role)' ,
+    'role-delete' => 'Usuwanie praw (Role)',
 
+    'news-list' => 'Podgląd (Aktualności)',
+    'news-create' => 'Dodawanie (Aktualności)',
+    'news-edit' => 'Edycja (Aktualności)',
+    'news-delete' => 'Usuwanie (Aktualności)',
 ];

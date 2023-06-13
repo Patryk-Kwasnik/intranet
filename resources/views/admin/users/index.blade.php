@@ -47,7 +47,7 @@
                                                 @endif
                                             </td>
                                             <td class="text-center">
-                                                <a href =" {{ route('users.show',$user->id) }}" class= " btn btn-info"> <i class="fa fa-pencil"></i> {{ __('system.preview') }} </a>
+                                                <a href =" {{ route('users.show',$user->id) }}" class= " btn btn-info"> <i class="fa fa-eye"></i> {{ __('system.preview') }} </a>
                                                 <a href =" {{ route('users.edit',$user->id) }}" class= " btn btn-dark" ><i class="fa fa-pencil"></i> {{ __('system.edit') }} </a>
                                                 {!! Form::open(['method' => 'DELETE','route' => ['users.destroy', $user->id],'style'=>'display:inline','class' => 'delete_row','id'=>$user->id, 'data-id'=> $user->id]) !!}
                                                 {!! Form::submit(' Usuń', ['class' => ' btn btn-danger']) !!}

@@ -9,10 +9,10 @@
                 <div class="col-12">
                     <div class="box">
                         <div class="box-header with-border">
-                            <h3 class="box-title">{{ __('roles.roles') }} </h3>
+                            <h3 class="box-title">{{ __('news.category') }} </h3>
                         </div>
                         <div class="pull-right">
-                            <a class="btn btn-primary mx-4 my-2" href="{{ route('roles.create') }}"> {{ __('system.create') }}</a>
+                            <a class="btn btn-primary mx-4 my-2" href="{{ route('newsCategory.create') }}"> {{ __('system.create') }}</a>
                         </div>
                         <!-- /.box-header -->
                         <div class="box-body">
@@ -23,21 +23,20 @@
                                         <th>{{ __('system.nr') }}</th>
                                         <th>{{ __('system.name') }}</th>
                                         <th class="col-3">{{ __('system.options') }}</th>
-
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    @foreach ($roles  as $key => $role)
+                                    @foreach ($news  as $key => $row)
                                         <tr>
                                             <td>{{ ++$i }}</td>
-                                            <td>{{ $role->name }}</td>
+                                            <td>{{ $row->name }}</td>
                                             <td class="text-center">
-                                                <a href ="{{ route('roles.show',$role->id) }}" class= " btn btn-info"> <i class="fa fa-eye"></i> {{ __('system.preview') }} </a>
-                                                @can('role-edit')
-                                                    <a href =" {{ route('roles.edit',$role->id) }}" class= " btn btn-dark" ><i class="fa fa-pencil"></i> {{ __('system.edit') }}  </a>
+                                                <a href ="{{ route('newsCategory.show',$row->id) }}" class= " btn btn-info"> <i class="fa fa-eye"></i> {{ __('system.preview') }} </a>
+                                                @can('news-edit')
+                                                    <a href =" {{ route('newsCategory.edit',$row->id) }}" class= " btn btn-dark" ><i class="fa fa-pencil"></i> {{ __('system.edit') }}  </a>
                                                 @endcan
-                                                @can('role-delete')
-                                                    {!! Form::open(['method' => 'DELETE','route' => ['roles.destroy', $role->id],'style'=>'display:inline','class' => 'delete_row','id'=>$role->id, 'data-id'=> $role->id]) !!}
+                                                @can('news-delete')
+                                                    {!! Form::open(['method' => 'DELETE','route' => ['newsCategory.destroy', $row->id],'style'=>'display:inline','class' => 'delete_row','id'=>$row->id, 'data-id'=> $row->id]) !!}
                                                     {!! Form::submit(' Usuń', ['class' => ' btn btn-danger']) !!}
                                                     {!! Form::close() !!}
                                                 @endcan

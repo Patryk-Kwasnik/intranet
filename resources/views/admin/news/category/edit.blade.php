@@ -21,27 +21,21 @@
                 </ul>
             </div>
         @endif
-        {!! Form::model($role, ['method' => 'PATCH','route' => ['roles.update', $role->id]]) !!}
+        {!! Form::model($category, ['method' => 'PATCH','route' => ['newsCategory.update', $category->id]]) !!}
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-6">
                 <div class="form-group">
-                    <strong>{{ __('roles.name') }}:</strong>
+                    <strong>{{ __('category.name') }}:</strong>
                     {!! Form::text('name', null, array('placeholder' => 'Name','class' => 'form-control')) !!}
                 </div>
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="col-xs-12 col-sm-12 col-md-4">
                 <div class="form-group">
-                    <strong>{{ __('roles.permission') }}:</strong>
-
-                    <br/>
-                    @foreach($permission as $value)
-                        <fieldset>
-                            <input type="checkbox" id="permission_{{$value->id}}" class="name" name="permission[]" value="{{$value->id}}" {{in_array($value->id, $rolePermissions) ? "checked" : false}} >
-                            <label for="permission_{{$value->id}}">  {{ __("permissions.$value->name") }}</label>
-                        </fieldset>
-                    @endforeach
+                    <strong>{{ __('news.category_parent') }}:</strong>
+                    {!! Form::select('id_parent', $categories, $category->id_parent , array('class' => 'form-control')) !!}
                 </div>
             </div>
+
             <div class="col-xs-12 col-sm-12 col-md-12 pull-left">
                 <button type="submit" class="btn btn-primary">{{ __('system.save') }}</button>
             </div>

@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-lg-12 margin-tb">
                 <div class="pull-left">
-                    <h2>{{ __('system.edit') }}</h2>
+                    <h2>{{ __('system.create') }}</h2>
                 </div>
                 <div class="pull-right">
                     <a class="btn btn-primary" href="{{ route('roles.index') }}"> {{ __('system.back') }}</a>
@@ -21,30 +21,26 @@
                 </ul>
             </div>
         @endif
-        {!! Form::model($role, ['method' => 'PATCH','route' => ['roles.update', $role->id]]) !!}
+        {!! Form::open(array('route' => 'newsCategory.store','method'=>'POST')) !!}
         <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-6">
+            <div class="col-xs-12 col-sm-12 col-md-4">
                 <div class="form-group">
-                    <strong>{{ __('roles.name') }}:</strong>
-                    {!! Form::text('name', null, array('placeholder' => 'Name','class' => 'form-control')) !!}
+                    <strong>{{ __('news.category_name') }}:</strong>
+                    {!! Form::text('name', null, array('placeholder' =>  __('news.category_name'),'class' => 'form-control')) !!}
                 </div>
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="col-xs-12 col-sm-12 col-md-4">
                 <div class="form-group">
-                    <strong>{{ __('roles.permission') }}:</strong>
+                    <strong>{{ __('news.category_parent') }}:</strong>
+                    {!! Form::select('id_parent', $categories,[], array('class' => 'form-control')) !!}
+                </div>
+            </div>
 
-                    <br/>
-                    @foreach($permission as $value)
-                        <fieldset>
-                            <input type="checkbox" id="permission_{{$value->id}}" class="name" name="permission[]" value="{{$value->id}}" {{in_array($value->id, $rolePermissions) ? "checked" : false}} >
-                            <label for="permission_{{$value->id}}">  {{ __("permissions.$value->name") }}</label>
-                        </fieldset>
-                    @endforeach
-                </div>
-            </div>
+
             <div class="col-xs-12 col-sm-12 col-md-12 pull-left">
                 <button type="submit" class="btn btn-primary">{{ __('system.save') }}</button>
             </div>
         </div>
-    {!! Form::close() !!}
+        {!! Form::close() !!}
+    </div>
 @endsection
