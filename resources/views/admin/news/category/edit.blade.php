@@ -7,7 +7,7 @@
                     <h2>{{ __('system.edit') }}</h2>
                 </div>
                 <div class="pull-right">
-                    <a class="btn btn-primary" href="{{ route('roles.index') }}"> {{ __('system.back') }}</a>
+                    <a class="btn btn-primary" href="{{ route('newsCategory.index') }}"> {{ __('system.back') }}</a>
                 </div>
             </div>
         </div>
@@ -25,7 +25,7 @@
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-6">
                 <div class="form-group">
-                    <strong>{{ __('category.name') }}:</strong>
+                    <strong>{{ __('news.category_name') }}:</strong>
                     {!! Form::text('name', null, array('placeholder' => 'Name','class' => 'form-control')) !!}
                 </div>
             </div>

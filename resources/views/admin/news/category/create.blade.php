@@ -7,7 +7,7 @@
                     <h2>{{ __('system.create') }}</h2>
                 </div>
                 <div class="pull-right">
-                    <a class="btn btn-primary" href="{{ route('roles.index') }}"> {{ __('system.back') }}</a>
+                    <a class="btn btn-primary" href="{{ route('newsCategory.index') }}"> {{ __('system.back') }}</a>
                 </div>
             </div>
         </div>
