@@ -39,12 +39,12 @@
                           <span>{{ __('system.nav_news_categories') }}</span>
                       </a>
                   </li>
-{{--                  <li>--}}
-{{--                      <a href="{{ route('news.index') }}">--}}
-{{--                          <i class="fa fa-cogs"></i>--}}
-{{--                          <span>{{ __('system.news') }}</span>--}}
-{{--                      </a>--}}
-{{--                  </li>--}}
+                  <li>
+                      <a href="{{ route('news.index') }}">
+                          <i class="fa fa-cogs"></i>
+                          <span>{{ __('system.nav_news') }}</span>
+                      </a>
+                  </li>
               </ul>
           </li>
         {{--Użytkownicy--}}

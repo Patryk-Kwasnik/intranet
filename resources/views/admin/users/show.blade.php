@@ -11,27 +11,29 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
-                    <strong>{{ __('users.name') }}:</strong>
-                    {{ $user->name }}
+        <div class="box p-4">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="form-group">
+                        <strong>{{ __('users.name') }}:</strong>
+                        {{ $user->name }}
+                    </div>
                 </div>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
-                    <strong>{{ __('users.email') }}:</strong>
-                    {{ $user->email }}
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="form-group">
+                        <strong>{{ __('users.email') }}:</strong>
+                        {{ $user->email }}
+                    </div>
                 </div>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
-                    <strong>{{ __('users.roles') }}:</strong>
-                    @if(!empty($user->getRoleNames()))
-                        @foreach($user->getRoleNames() as $v)
-                            <span class="badge rounded-pill bg-dark">{{ $v }}</span>
-                        @endforeach
-                    @endif
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="form-group">
+                        <strong>{{ __('users.roles') }}:</strong>
+                        @if(!empty($user->getRoleNames()))
+                            @foreach($user->getRoleNames() as $v)
+                                <span class="badge rounded-pill bg-dark">{{ $v }}</span>
+                            @endforeach
+                        @endif
+                    </div>
                 </div>
             </div>
         </div>

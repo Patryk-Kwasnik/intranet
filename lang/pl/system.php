@@ -14,6 +14,8 @@ return [
     'success_save_mess' => 'Wpis został dodany',
     'success_update_mes' => 'Wpis został zaktualizowany',
     'success_del_mess' => 'Wpis został usunięty',
+    'error_input' => 'Wystąpił błąd walidacji wprowadzonych danych',
+
     'nav_roles_settings' => 'Ustawienia praw',
     'nav_users_settings' => 'Zarządzaj użytkownikami',
     'nav_news' => 'Aktualności',
