@@ -47,6 +47,27 @@
                   </li>
               </ul>
           </li>
+          {{--zadania--}}
+          <li class="treeview">
+              <a href="{{ route('tasks.index') }}">
+                  <i data-feather="tasks"></i>
+                  <span>{{ __('system.nav_tasks') }}</span>
+              </a>
+              <ul class="treeview-menu">
+                  <li>
+                      <a href="{{ route('calendar.index') }}">
+                          <i class="fa fa-cogs" ></i>
+                          <span>{{ __('system.nav_calendar') }}</span>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="{{ route('tasks.index') }}">
+                          <i class="fa fa-cogs"></i>
+                          <span>{{ __('system.nav_tasks') }}</span>
+                      </a>
+                  </li>
+              </ul>
+          </li>
         {{--Użytkownicy--}}
         <li class="treeview">
           <a href="{{ route('users.index') }}">

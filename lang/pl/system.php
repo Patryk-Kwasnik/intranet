@@ -19,5 +19,7 @@ return [
     'nav_roles_settings' => 'Ustawienia praw',
     'nav_users_settings' => 'Zarządzaj użytkownikami',
     'nav_news' => 'Aktualności',
+    'nav_tasks' => 'Zadania',
     'nav_news_categories' => 'Kategorie Aktualności',
+    'nav_calendar' => 'Kalendarz zadań'
 ];

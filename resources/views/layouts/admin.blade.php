@@ -17,6 +17,9 @@
     <link rel="stylesheet" href=" {{asset('adminPanel/css/style.css')}}">
     <link rel="stylesheet" href=" {{asset('adminPanel/css/skin_color.css')}}">
 
+    <link rel="stylesheet" href=" {{asset('adminPanel/css/style.css')}}">
+    <link rel="stylesheet" href=" {{asset('adminPanel/css/skin_color.css')}}">
+
 </head>
 
 <body class="hold-transition dark-skin sidebar-mini theme-primary fixed">

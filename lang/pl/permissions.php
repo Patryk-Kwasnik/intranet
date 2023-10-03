@@ -25,4 +25,9 @@ return [
     'news-create' => 'Dodawanie (Aktualności)',
     'news-edit' => 'Edycja (Aktualności)',
     'news-delete' => 'Usuwanie (Aktualności)',
+
+    'tasks-list' => 'Podgląd (Zadania)',
+    'tasks-create' => 'Dodawanie (Zadania)',
+    'tasks-edit' => 'Edycja (Zadania)',
+    'tasks-delete' => 'Usuwanie (Zadania)',
 ];
