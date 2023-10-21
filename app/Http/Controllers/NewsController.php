@@ -30,6 +30,17 @@ class NewsController extends Controller
     }
 
     /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public static function showNewest()
+    {
+        $news = News::orderBy('id','DESC')->first();
+        $categories = NewsCategory::pluck('name','id')->toArray();
+        return view('admin.news.newest_window',compact('news', 'categories'))->render();
+    }
+    /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
