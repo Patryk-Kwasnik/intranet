@@ -19,7 +19,7 @@
 
     <link rel="stylesheet" href=" {{asset('adminPanel/css/style.css')}}">
     <link rel="stylesheet" href=" {{asset('adminPanel/css/skin_color.css')}}">
-
+	<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body class="hold-transition dark-skin sidebar-mini theme-primary fixed">
@@ -56,7 +56,6 @@
 {{--<!-- Sunny Admin App -->--}}
 <script src="{{asset('adminPanel/js/template.js')}}"></script>
 <script src="{{asset('adminPanel/js/pages/dashboard.js')}}"></script>
-<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 <script>
     $.ajaxSetup({

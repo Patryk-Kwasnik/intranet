@@ -90,6 +90,14 @@
             </ul>
         </li>
 
+        {{--wyloguj--}}
+        <li>
+          <a href="{{ route('admin.logout') }}">
+            <i class="ri-shut-down-line align-middle me-1 text-danger"></i>
+			<span>Wyloguj</span>
+          </a>
+        </li>
+
       </ul>
     </section>
 
